@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>We Value Your Voice 💬</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>📋 College Feedback Form</h2>
+        <form id="feedbackForm" onsubmit="return showThanks(event)">
+            <input type="text" name="college" id="college" placeholder="Enter College Name" required>
+            <input type="text" name="name" id="name" placeholder="Your Name" required>
+            <input type="email" name="email" id="email" placeholder="Your Email" required>
+
+            <select name="department" id="department" required>
+                <option value="">Select Department</option>
+                <option value="CSE">Computer Science and Engineering</option>
+                <option value="ECE">Electronics and Communication Engineering</option>
+                <option value="EEE">Electrical and Electronics Engineering</option>
+                <option value="MECH">Mechanical Engineering</option>
+                <option value="CIVIL">Civil Engineering</option>
+                <option value="IT">Information Technology</option>
+                <option value="BME">Biomedical Engineering</option>
+                <option value="CHEM">Chemical Engineering</option>
+                <option value="AERO">Aeronautical Engineering</option>
+                <option value="AGRI">Agricultural Engineering</option>
+                <option value="MBA">Master of Business Administration</option>
+                <option value="MCA">Master of Computer Applications</option>
+                <option value="Others">others</option>
+            </select>
+
+            <!-- Star Ratings -->
+            <div class="rating-group">
+                <label>📚 Teaching Quality:</label>
+                <div class="stars" id="teaching"></div>
+            </div>
+
+            <div class="rating-group">
+                <label>🏫 Infrastructure:</label>
+                <div class="stars" id="infra"></div>
+            </div>
+
+            <div class="rating-group">
+                <label>🍱 Food Quality:</label>
+                <div class="stars" id="food"></div>
+            </div>
+
+            <div class="rating-group">
+                <label>💼 Placement Support:</label>
+                <div class="stars" id="placement"></div>
+            </div>
+
+            <textarea name="feedback" id="feedback" rows="4" placeholder="Your Feedback" required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <div id="thankYouMessage" class="hidden">
+            <h3>🎉 Thank You!</h3>
+            <p id="randomQuote">“Your feedback is the fuel that drives us forward!” 🚀</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
